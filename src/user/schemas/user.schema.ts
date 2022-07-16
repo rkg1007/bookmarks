@@ -3,10 +3,10 @@ import { Document } from "mongoose";
 
 @Schema()
 export class User {
-  @Prop()
+  @Prop({ required: true, unique: true })
   email: String;
 
-  @Prop()
+  @Prop({ required: true })
   password: String;
 
   @Prop()
